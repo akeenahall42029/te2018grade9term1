@@ -5,9 +5,16 @@ const READLINE = require("readline-sync");
 // an adult. Write code that prints whether or not someone can see an
 // R-rated movie.
 console.log("*** Problem 1: R-rated ***");
-let age = READLINE.question("Enter your age: ");
+let age = READLINE.question("Enter your age:");
 let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
 
+if (age >= 18 || withAdult== "yes") {
+	console.log("Enjoy your movie!")
+
+} else { 
+
+	console.log("You need an adult");
+}
 
 // **** Problem 2: Umbrella ****
 // You should bring an umbrella when you travel, but only if it is raining.
@@ -18,6 +25,16 @@ console.log("*** Problem 2: Umbrella ***");
 let raining = READLINE.question("Is it raining? (yes or no): ");
 let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
 
+if (raining =="yes") {
+	console.log("Bring your umbrella");
+}
+
+else if (thunderstorming == "yes") {
+	console.log("Don't bring your umbrella");
+
+}else { 
+	console.log("Have a nice day in the good weather");
+}
 
 // **** Problem 3: Monkey Trouble ****
 // There are two monkeys: Bubbles and Spankey. You are in trouble if both of
@@ -26,7 +43,16 @@ let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
 console.log("*** Problem 3: Monkey Trouble ***");
 let bubbles = READLINE.question("Is Bubbles smiling? (yes or no): ");
 let spankey = READLINE.question("Is Spankey smiling? (yes or no): ");
+ 
+ if (bubbles == "yes" && spankey == "yes"  || (bubbles == "no" && spankey == "no")) {
+ 	console.log("Run!!! You're in danger.")
 
+ } 
+ else if ((bubbles == "no" && spankey=="yes") || bubbles== "yes" && spankey== "no") {
+ 	console.log("These are some good monkeys, continue with your day. :)")
+
+}
+ 
 
 // **** Problem 4: First Place ****
 // Write code that prints the largest of three scores. If there is a tie for
