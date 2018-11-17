@@ -2,7 +2,15 @@ const READLINE = require("readline-sync");
 
 // **** Problem 1: printMessage() ****
 // Write a function that prints any message you want.
-
+let student= {
+	name:"Akeena",
+	school:"UAMA",
+	homeworkAmount:5,
+	doHomework: function() {
+		console.log("What subjects of homework do you have?")
+	}
+}
+student.doHomework();
 
 // **** Problem 2: printFiveMessages() ****
 // Write a function that calls printMessage() five times.
