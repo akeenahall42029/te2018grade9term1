@@ -1,7 +1,7 @@
 /******************************************************************************
                                    withoutEnd()
 Instructions:
-Given a string, return a version without the first and last char, so "Hello"
+Given a string, return a version without the first and last character, so "Hello"
 yields "ell". The string length will be at least 2.
 Examples:
 withoutEnd("Hello") → "ell"
@@ -10,11 +10,13 @@ withoutEnd("coding") → "odin"
 *******************************************************************************/
 
 function withoutEnd(str) {
+  let newStr = str.substring(1,str.length -1)
+  return newStr;
 
 }
 
 // Remove comment below to test this function.
-//testWithoutEnd();
+testWithoutEnd();
 
 /******************************************************************************
                                    frontAgain()
@@ -29,11 +31,23 @@ frontAgain("ed") → true
 
 
 function frontAgain(str) {
+  let firstLet= str.charAt(0);
+  let secondLet= str.charAt(1);
+  let lastLet= str.charAt(str.length-1)
+  let secondLastLet= str.charAt(str.length-2)
 
+if (str.length== 0){
+  return false 
 }
 
+ if (firstLet== secondLastLet && secondLet == lastLet){
+  return true 
+}else {
+  return false 
+}
+}
 // Test this function.
-//testFrontAgain();
+testFrontAgain();
 
 /******************************************************************************
                                    deFront()
@@ -48,11 +62,17 @@ deFront("away") → "aay"
 *******************************************************************************/
 
 function deFront(str) {
+  let firstLet= str.charAt(0);
+  let secondLet= str.charAt(1);
+  if (firstLet== "a" || secondLet == "b"){
+    return str.substring(//work on this part of code// 
+      );
 
+  }
 }
 
 // Test this function.
-//testDeFront();
+testDeFront();
 
 /******************************************************************************
                                    without2()

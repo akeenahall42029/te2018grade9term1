@@ -10,8 +10,14 @@ sumDouble(1, 2) → 3
 sumDouble(3, 2) → 5
 sumDouble(2, 2) → 8
 *******************************************************************************/
-
-
+function sumDouble(num1,num2){
+  if(num1 == num2){
+    return (num1 + num2) * 2
+  }else {
+    return num1 + num2
+  }
+}
+console.log(sumDouble(2,7));
 
 // Remove comment below to test this function.
 //testSumDouble();
@@ -19,7 +25,7 @@ sumDouble(2, 2) → 8
 /******************************************************************************
                                    makes10(a, b)
 Instructions:
-Given 2 numbers, a and b, return true if one if them is 10 or if their sum is 10.
+Given 2 numbers, a and b, return true if one of them is 10 or if their sum is 10.
 
 Examples:
 makes10(9, 10) → true
@@ -27,7 +33,16 @@ makes10(9, 9) → false
 makes10(1, 9) → true
 *******************************************************************************/
 
+function makes10(a,b){
+  if(a + b == 10 || (a == 10 || b == 10)){
+//this evaluates if the sum of a and b equals ten or if a or b is 10
+  return true 
+  }else {
+    return false 
+  }
 
+}
+console.log(makes10(5,8));
 
 // Remove comment below to test this function.
 //testMakes10();
@@ -45,6 +60,14 @@ parrotTrouble(true, 6) → true
 parrotTrouble(true, 7) → false
 parrotTrouble(false, 6) → false
 *******************************************************************************/
+function parrotTrouble(talking,hour){
+  if (talking== true && hour < 7 || hour > 20){
+return true 
+  } else {
+    return false 
+  }
+}
+console.log(parrotTrouble(true,23));
 
 
 
@@ -59,14 +82,26 @@ indicating if we are on vacation, return a string of the form "7:00" indicating
 when the alarm clock should ring. Weekdays, the alarm should be "7:00" and on
 the weekend it should be "10:00". Unless we are on vacation -- then on weekdays
 it should be "10:00" and weekends it should be "off".
-
+Wed=3 
+Thur=4 
+Fri= 5 
 Examples:
 alarmClock(1, false) → "7:00"
 alarmClock(6, true) → "off"
 alarmClock(0, false) → "10:00"
 *******************************************************************************/
+function alarmClock(day,vacation){
+  if((day >= 1 && day <= 5) && vacation == false){
+    return "7:00"
+  }
+  
+  if(day == 6 || day == 0) {
+    return "10:00"
+  } else (vacation== true && day == 6 || day == 0)
+    return "alarm clock off!"
+  }
 
-
+console.log(alarmClock(4,true));
 
 // Remove comment below to test this function.
 //testAlarmClock();
