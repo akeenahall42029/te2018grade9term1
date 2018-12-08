@@ -10,11 +10,18 @@ firstLast6([13, 6, 1, 2, 3]) → false
 *******************************************************************************/
 
 function firstLast6(nums) {
+  if (nums[0] == 6 || nums[nums.length-1] == 6){
+    return true 
+  }
 
+else{
+  return false
+
+}
 }
 
 // Remove comment below to test this function.
-//testFirstLast6();
+testFirstLast6();
 
 /******************************************************************************
                                    midThree()
@@ -25,14 +32,19 @@ Examples:
 midThree([1, 2, 3, 4, 5]) → [2, 3, 4]
 midThree([8, 6, 7, 5, 3, 0, 9]) → [7, 5, 3]
 midThree([1, 2, 3]) → [1, 2, 3]
+ Need a splice and the length of the array objects will be no less than three.
 *******************************************************************************/
 
 function midThree(nums) {
-
+let middle = (nums.length/2) - 0.5
+let nums2 = []
+  nums2.push(nums[middle-1])
+  nums2.push(nums[middle])
+  nums2.push(nums[middle+1])
+return nums2
 }
-
 // Remove comment below to test this function.
-//testMidThree();
+testMidThree();
 
 /******************************************************************************
                                    fizzBuzz()
@@ -71,6 +83,8 @@ Examples:
 copyEvens([3, 2, 4, 5, 8], 2) → [2, 4]
 copyEvens([3, 2, 4, 5, 8], 3) → [2, 4, 8]
 copyEvens([6, 1, 2, 4, 5, 8], 3) → [6, 2, 4]
+Check if it's even, if so, add it to the array.
+
 *******************************************************************************/
 
 function copyEvens(nums, count) {
@@ -82,7 +96,7 @@ function copyEvens(nums, count) {
 
 /******************************************************************************
                                    zeroMax()
-Instructions:
+Instructions:x
 Return a new version of the given array (i.e., don't modify the original) where
 each zero value in the array is replaced by the largest odd value to the right
 of the zero in the array. If there is no odd value to the right of the zero,
